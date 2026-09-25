@@ -826,6 +826,26 @@ img.app-icon { object-fit: cover; }
 
 .help-contact .btn { margin-top: 0.5rem; word-break: break-all; }
 
+/* ---------- sosyal baglantilar ---------- */
+
+.foot-brand { display: grid; gap: 0.9rem; }
+
+.foot .social { gap: 0.4rem; }
+
+.foot .social a {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 0.88rem;
+  text-decoration: none;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1.5px solid var(--rule);
+  border-radius: 999px;
+  padding: 0.3rem 0.8rem;
+}
+
+.foot .social a:hover { border-color: var(--brand); }
+
 /* ---------- mobil ---------- */
 
 @media (max-width: 54rem) {
