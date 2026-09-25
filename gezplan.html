@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GezPlan</title>
+<meta name="description" content="GezPlan, arkadaş gruplarının gezi planlamasını tek yerde toplar: eşya listesi, masraf bölüşümü, grup sohbeti, oylama ve ortak fotoğraf albümü. Android için ücretsiz.">
+<meta property="og:title" content="GezPlan: grup gezisi planlama">
+<meta property="og:description" content="Kim ne getiriyor, kim ne kadar ödedi, nereye gidiyoruz. Hepsi tek uygulamada.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="mark" href="index.html"><span class="mark-glyph" aria-hidden="true">C</span>ConquApp</a>
+    <nav class="topnav" aria-label="Site">
+      <a href="gezplan.html" aria-current="page">GezPlan</a>
+      <a class="nav-extra" href="#ozellikler">Özellikler</a>
+      <a href="index.html#iletisim">İletişim</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="trip-hero">
+  <div class="wrap">
+    <div>
+      <h1>Gezi planı grup sohbetinde kaybolmasın.</h1>
+      <p class="lede">GezPlan bir gezinin bütün hareketli parçalarını tek yerde tutuyor. Davet kodunu paylaş, herkes aynı plana katılsın.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.conquu.gezplan">
+          <svg class="play-glyph" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9.5-5.5z" fill="currentColor"/></svg>
+          Google Play'den indir
+        </a>
+        <a class="btn btn-line" href="#kimler-dahil">Masraf bölüşümünü dene</a>
+      </div>
+    </div>
+
+    <div class="trip-demo">
+      <div class="trip-card" id="tripCard" aria-live="polite">
+        <div class="tc-top">
+          <span class="tc-emoji" id="tcEmoji" aria-hidden="true">⛺</span>
+          <span class="tc-code" title="Davet kodu">XEZNJ7UP</span>
+        </div>
+        <div class="tc-mid">
+          <p class="tc-title" id="tcTitle">Abant kampı</p>
+          <p class="tc-place" id="tcPlace">Abant Gölü, Bolu</p>
+          <div class="tc-count"><strong id="tcDays">11</strong><span>gün kaldı</span></div>
+        </div>
+        <div class="tc-bottom">
+          <div class="avatars"><span>E</span><span>M</span><span>S</span><em id="tcMembers">4 üye</em></div>
+          <div class="tc-ready"><strong id="tcReady">4/9</strong> hazır</div>
+        </div>
+      </div>
+      <div class="theme-switch" role="group" aria-label="Gezi türü">
+        <button type="button" id="th-kamp" data-theme-key="kamp" aria-pressed="true">⛺ Kamp</button>
+        <button type="button" id="th-deniz" data-theme-key="deniz" aria-pressed="false">🏖️ Deniz</button>
+        <button type="button" id="th-piknik" data-theme-key="piknik" aria-pressed="false">🧺 Piknik</button>
+        <button type="button" id="th-doga" data-theme-key="doga" aria-pressed="false">🥾 Doğa yürüyüşü</button>
+      </div>
+      <p class="demo-note">Örnek gezi. Uygulamada her gezi türünün kendi rengi var.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="ozellikler">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Bir gezide konuşulan her şey için bir sekme</h2>
+      <p class="lede">Hepsi anlık güncelleniyor. Biri bir şey eklediğinde diğerleri hemen görüyor.</p>
+    </div>
+
+    <div class="gallery" tabindex="0" aria-label="Uygulama ekranları">
+      <figure>
+        <img src="img/masraf.webp" alt="Masraf sekmesi: toplam harcama, kategori dağılımı ve kimin kime borçlu olduğu" width="620" height="1288">
+        <figcaption><strong>Masraf</strong><span>Harcamayı gir. Kim kime ne kadar borçlu, uygulama hesaplıyor.</span></figcaption>
+      </figure>
+      <figure>
+        <img src="img/liste.webp" alt="Liste sekmesi: ortak eşya listesi ve kimin neyi alacağı" width="620" height="1291" loading="lazy">
+        <figcaption><strong>Liste</strong><span>Her eşyayı biri üstleniyor. Aynı şeyi üç kişi getirmiyor.</span></figcaption>
+      </figure>
+      <figure>
+        <img src="img/oylama.webp" alt="Oy sekmesi: yeni oylama ve oy sonuçları" width="620" height="1291" loading="lazy">
+        <figcaption><strong>Oy</strong><span>Hangi gün, hangi saat, nerede yemek. Grup oylasın.</span></figcaption>
+      </figure>
+      <figure>
+        <img src="img/sohbet.webp" alt="Sohbet sekmesi: geziye özel grup mesajları" width="620" height="1287" loading="lazy">
+        <figcaption><strong>Sohbet ve not</strong><span>Bilet saati ve buluşma yeri yüzlerce mesaj arasında kaybolmuyor.</span></figcaption>
+      </figure>
+      <figure>
+        <img src="img/anilar.webp" alt="Anılar sekmesi: ortak fotoğraf albümü" width="620" height="1286" loading="lazy">
+        <figcaption><strong>Anılar</strong><span>Herkesin çektiği fotoğraflar tek bir ortak albümde.</span></figcaption>
+      </figure>
+      <figure>
+        <img src="img/karne.webp" alt="Gezi karnesi: kişi, harcama, fotoğraf ve mesaj istatistikleri" width="620" height="1286" loading="lazy">
+        <figcaption><strong>Gezi karnesi</strong><span>Gezi bitince özet çıkıyor. En cömert kim, en konuşkan kim.</span></figcaption>
+      </figure>
+      <figure>
+        <img src="img/rozet.webp" alt="Profil ekranı: gezi geçmişi ve rozetler" width="620" height="1289" loading="lazy">
+        <figcaption><strong>Profil ve rozetler</strong><span>Gezi geçmişin birikiyor, yeni yerler gördükçe rozet açılıyor.</span></figcaption>
+      </figure>
+    </div>
+    <p class="swipe-hint">Diğer ekranlar için yana kaydır.</p>
+  </div>
+</section>
+
+<section class="band" id="kimler-dahil">
+  <div class="wrap split">
+    <div>
+      <h2>Herkesin katılmadığı harcamalar sadece katılanlara bölünür</h2>
+      <p class="lede">Akşam yemeğine dört kişiden üçü gittiyse gitmeyen borçlanmaz. Masrafı eklerken kimlerin dahil olduğunu seçiyorsun, gerisini uygulama hesaplıyor.</p>
+      <p class="dim">Örnekte kişilere dokunarak dene.</p>
+    </div>
+
+    <div class="split-panel">
+      <div class="exp-row"><strong>Akşam yemeği</strong><span class="exp-amount">900 ₺</span></div>
+      <div class="exp-by">Ece ödedi</div>
+      <div class="inc-label" id="incLabel">Kimler dahil: Herkes (4 kişi)</div>
+      <div class="people" role="group" aria-label="Kimler dahil">
+        <button type="button" id="p-ece" data-person="Ece" aria-pressed="true">Ece</button>
+        <button type="button" id="p-mert" data-person="Mert" aria-pressed="true">Mert</button>
+        <button type="button" id="p-selin" data-person="Selin" aria-pressed="true">Selin</button>
+        <button type="button" id="p-kaan" data-person="Kaan" aria-pressed="true">Kaan</button>
+      </div>
+      <div class="plan" aria-live="polite">
+        <div class="plan-title">💸 Ödeme planı</div>
+        <div id="planLines"></div>
+      </div>
+      <p class="split-msg" id="splitMsg"></p>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Ayrıca</h2>
+    </div>
+    <ul class="extras">
+      <li><strong>Geri sayım</strong><span>Gezi gününe kaç gün kaldığı ve grubun ne kadar hazır olduğu ana kartta.</span></li>
+      <li><strong>Hava durumu</strong><span>Gideceğin yerin hava durumu gezi kartında görünüyor.</span></li>
+      <li><strong>Hatırlatmalar</strong><span>Gezi yaklaşınca bildirim geliyor.</span></li>
+      <li><strong>PDF raporu</strong><span>Masraf özetini ve ödeme planını PDF olarak gruba gönder.</span></li>
+    </ul>
+    <p class="dim" style="margin-top:2rem">GezPlan ücretsiz. Sınırsız gezi, sınırsız fotoğraf ve masraf analizi gibi ek özellikler için Premium hazırlanıyor.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="cta">
+      <h2>Bir sonraki geziyi GezPlan'la planla.</h2>
+      <p>Android için ücretsiz. Türkçe ve İngilizce.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.conquu.gezplan">
+          <svg class="play-glyph" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9.5-5.5z" fill="currentColor"/></svg>
+          Google Play'den indir
+        </a>
+        <a class="btn btn-line" href="https://conquu.github.io/gezplan-privacy/">Gizlilik politikası</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p><strong style="color:var(--ink)">ConquApp</strong><br>Bağımsız mobil uygulama stüdyosu</p>
+    <ul>
+      <li><a href="index.html">Ana sayfa</a></li>
+      <li><a href="mailto:kampprojesi@gmail.com">kampprojesi@gmail.com</a></li>
+      <li><a href="https://conquu.github.io/gezplan-privacy/">Gizlilik politikası</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+(function () {
+  /* ---- gezi turu temasi ---- */
+  var THEMES = {
+    kamp:   { t1: "#2E7D5B", t2: "#43A57C", emoji: "⛺",  title: "Abant kampı",      place: "Abant Gölü, Bolu",       days: 11, ready: "4/9" },
+    deniz:  { t1: "#2F80C4", t2: "#56A8E0", emoji: "🏖️", title: "Antalya",          place: "Konyaaltı, Antalya",     days: 23, ready: "2/5" },
+    piknik: { t1: "#D96F24", t2: "#F2A65A", emoji: "🧺", title: "Pazar pikniği",    place: "Belgrad Ormanı, İstanbul", days: 3, ready: "6/7" },
+    doga:   { t1: "#8A5E36", t2: "#B98A5E", emoji: "🥾", title: "Kaçkar yürüyüşü",  place: "Yukarı Kavrun, Rize",    days: 38, ready: "1/8" }
+  };
+  var root = document.documentElement;
+  var themeButtons = document.querySelectorAll("[data-theme-key]");
+
+  function setTheme(key) {
+    var th = THEMES[key];
+    if (!th) return;
+    root.style.setProperty("--t1", th.t1);
+    root.style.setProperty("--t2", th.t2);
+    document.getElementById("tcEmoji").textContent = th.emoji;
+    document.getElementById("tcTitle").textContent = th.title;
+    document.getElementById("tcPlace").textContent = th.place;
+    document.getElementById("tcDays").textContent = th.days;
+    document.getElementById("tcReady").textContent = th.ready;
+    themeButtons.forEach(function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-theme-key") === key ? "true" : "false");
+    });
+  }
+
+  themeButtons.forEach(function (b) {
+    b.addEventListener("click", function () { setTheme(b.getAttribute("data-theme-key")); });
+  });
+
+  /* ---- kimler dahil demosu (uygulamadaki kurus mantigiyla ayni) ---- */
+  var ORDER = ["Ece", "Mert", "Selin", "Kaan"];
+  var PAYER = "Ece";
+  var AMOUNT_K = 90000; /* 900 TL, kurus */
+  var included = ORDER.slice();
+  var peopleButtons = document.querySelectorAll("[data-person]");
+  var msg = document.getElementById("splitMsg");
+
+  function fmt(k) {
+    var v = k / 100;
+    var digits = k % 100 !== 0 ? 2 : 0;
+    return v.toLocaleString("tr-TR", { minimumFractionDigits: digits, maximumFractionDigits: digits }) + " ₺";
+  }
+
+  function render() {
+    var n = included.length;
+    document.getElementById("incLabel").textContent = n === ORDER.length
+      ? "Kimler dahil: Herkes (" + n + " kişi)"
+      : "Kimler dahil: " + n + " kişi";
+
+    var base = Math.floor(AMOUNT_K / n);
+    var rem = AMOUNT_K - base * n;
+    var lines = document.getElementById("planLines");
+    lines.innerHTML = "";
+    var debtors = 0;
+    included.forEach(function (name, idx) {
+      if (name === PAYER) return;
+      var share = base + (idx < rem ? 1 : 0);
+      var row = document.createElement("div");
+      row.className = "plan-line";
+      var who = document.createElement("span");
+      who.textContent = name + " → " + PAYER;
+      var amt = document.createElement("b");
+      amt.textContent = fmt(share);
+      row.appendChild(who);
+      row.appendChild(amt);
+      lines.appendChild(row);
+      debtors++;
+    });
+    if (debtors === 0) {
+      var none = document.createElement("div");
+      none.className = "plan-line";
+      none.textContent = "Kimse borçlu değil. Ece kendi harcamasını ödedi.";
+      lines.appendChild(none);
+    }
+    peopleButtons.forEach(function (b) {
+      b.setAttribute("aria-pressed", included.indexOf(b.getAttribute("data-person")) !== -1 ? "true" : "false");
+    });
+  }
+
+  peopleButtons.forEach(function (b) {
+    b.addEventListener("click", function () {
+      var name = b.getAttribute("data-person");
+      var i = included.indexOf(name);
+      msg.textContent = "";
+      if (i !== -1) {
+        if (included.length <= 1) { msg.textContent = "En az bir kişi dahil olmalı."; return; }
+        included.splice(i, 1);
+      } else {
+        included = ORDER.filter(function (p) { return p === name || included.indexOf(p) !== -1; });
+      }
+      render();
+    });
+  });
+
+  render();
+})();
+</script>
+
+</body>
+</html>
