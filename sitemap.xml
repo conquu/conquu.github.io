@@ -25,6 +25,18 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://conquu.github.io/en/gezplan.html"/>
   </url>
   <url>
+    <loc>https://conquu.github.io/yardim.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://conquu.github.io/yardim.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://conquu.github.io/en/help.html"/>
+  </url>
+  <url>
+    <loc>https://conquu.github.io/en/help.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://conquu.github.io/yardim.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://conquu.github.io/en/help.html"/>
+  </url>
+  <url>
     <loc>https://conquu.github.io/gezplan-privacy/</loc>
     <lastmod>2026-09-25</lastmod>
   </url>

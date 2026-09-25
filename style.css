@@ -732,6 +732,100 @@ p:last-child { margin-bottom: 0; }
 
 img.app-icon { object-fit: cover; }
 
+/* ---------- yardim / sss ---------- */
+
+.help-head { padding-bottom: 1rem; }
+
+.help-head h1 { margin-bottom: 0.75rem; }
+
+.help-cats {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.help-cats a {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 0.93rem;
+  text-decoration: none;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1.5px solid var(--rule);
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+}
+
+.help-cats a:hover { border-color: var(--brand); }
+
+.band.help-body { padding-top: 1rem; }
+
+.help-wrap { max-width: 50rem; }
+
+.faq-group { scroll-margin-top: 5rem; }
+
+.faq-group + .faq-group { margin-top: 2.75rem; }
+
+.faq-group h2 { font-size: clamp(1.3rem, 1.15rem + 0.7vw, 1.65rem); margin-bottom: 0.75rem; }
+
+.faq {
+  border-top: 1px solid var(--rule);
+  scroll-margin-top: 5rem;
+}
+
+.faq:last-child { border-bottom: 1px solid var(--rule); }
+
+.faq summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 0.25rem;
+  font-weight: 600;
+  font-size: 1.02rem;
+}
+
+.faq summary::-webkit-details-marker { display: none; }
+
+.faq summary::after {
+  content: "+";
+  flex: none;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: var(--brand-soft);
+  color: var(--brand);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.faq[open] summary::after { content: "−"; }
+
+.faq summary:hover { color: var(--brand); }
+
+.faq-a { padding: 0 0.25rem 1.1rem; color: var(--muted); }
+
+.faq-a strong { color: var(--ink); }
+
+.help-contact {
+  margin-top: 3rem;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 1.5rem;
+  padding: clamp(1.35rem, 3vw, 2rem);
+}
+
+.help-contact h2 { margin-bottom: 0.5rem; font-size: clamp(1.3rem, 1.15rem + 0.7vw, 1.65rem); }
+
+.help-contact .btn { margin-top: 0.5rem; word-break: break-all; }
+
 /* ---------- mobil ---------- */
 
 @media (max-width: 54rem) {
