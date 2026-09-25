@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://conquu.github.io/</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://conquu.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://conquu.github.io/en/"/>
+  </url>
+  <url>
+    <loc>https://conquu.github.io/en/</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://conquu.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://conquu.github.io/en/"/>
+  </url>
+  <url>
+    <loc>https://conquu.github.io/gezplan.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://conquu.github.io/gezplan.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://conquu.github.io/en/gezplan.html"/>
+  </url>
+  <url>
+    <loc>https://conquu.github.io/en/gezplan.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://conquu.github.io/gezplan.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://conquu.github.io/en/gezplan.html"/>
+  </url>
+  <url>
+    <loc>https://conquu.github.io/gezplan-privacy/</loc>
+    <lastmod>2026-09-25</lastmod>
+  </url>
+  <url>
+    <loc>https://conquu.github.io/gezplan-privacy/hesap-silme.html</loc>
+    <lastmod>2026-09-25</lastmod>
+  </url>
+</urlset>

@@ -5,15 +5,39 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>ConquApp</title>
 <meta name="description" content="ConquApp, birlikte bir şey organize eden gruplar için mobil uygulamalar geliştiriyor. İlk uygulaması GezPlan, Google Play'de ücretsiz.">
+<link rel="canonical" href="https://conquu.github.io/">
+<link rel="alternate" hreflang="tr" href="https://conquu.github.io/">
+<link rel="alternate" hreflang="en" href="https://conquu.github.io/en/">
+<link rel="alternate" hreflang="x-default" href="https://conquu.github.io/en/">
+<meta property="og:site_name" content="ConquApp">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://conquu.github.io/">
 <meta property="og:title" content="ConquApp">
 <meta property="og:description" content="Birlikte plan yapan gruplar için mobil uygulamalar. İlk uygulamamız GezPlan.">
-<meta property="og:type" content="website">
+<meta property="og:image" content="https://conquu.github.io/og/conquapp-tr.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/conquapp-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/conquapp-192.png">
+<link rel="apple-touch-icon" href="icons/conquapp-180.png">
+<meta name="theme-color" content="#1C4F39">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<div class="lang-banner" id="langBanner" lang="en" hidden>
+  <div class="wrap">
+    <span>This page is also available in English.</span>
+    <a href="en/index.html" hreflang="en" data-set-lang="en">View in English</a>
+    <button type="button" data-dismiss aria-label="Close">✕</button>
+  </div>
+</div>
 
 <header class="topbar">
   <div class="wrap">
@@ -22,6 +46,7 @@
       <a href="gezplan.html">GezPlan</a>
       <a class="nav-extra" href="#studyo">Stüdyo</a>
       <a href="#iletisim">İletişim</a>
+      <a class="lang-pill" href="en/index.html" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a>
     </nav>
   </div>
 </header>
@@ -35,7 +60,7 @@
       <p class="lede">Kim ne getiriyor, kim ne kadar ödedi, nereye gidiyoruz. ConquApp, grupların bu soruları tek yerde çözmesi için mobil uygulamalar geliştiriyor.</p>
       <div class="actions">
         <a class="btn btn-primary" href="gezplan.html">GezPlan'ı keşfet</a>
-        <a class="btn btn-line" href="https://play.google.com/store/apps/details?id=com.conquu.gezplan">
+        <a class="btn btn-line" href="https://play.google.com/store/apps/details?id=com.conquu.gezplan&amp;hl=tr">
           <svg class="play-glyph" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9.5-5.5z" fill="currentColor"/></svg>
           Google Play
         </a>
@@ -57,7 +82,7 @@
 
     <div class="shelf">
       <article class="app-card">
-        <div class="app-icon" aria-hidden="true">🧭</div>
+        <img class="app-icon" src="icons/gezplan-192.png" alt="" width="192" height="192">
         <div>
           <h3>GezPlan</h3>
           <p class="dim">Grup gezisi planlama. Eşya listesi, masraf bölüşümü, sohbet, oylama ve ortak fotoğraf albümü. Tek bir davet koduyla herkes aynı plana katılıyor.</p>
@@ -70,7 +95,7 @@
         <div class="trip-stripe" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
         <div class="actions">
           <a class="btn btn-primary" href="gezplan.html">Neler yapıyor</a>
-          <a class="btn btn-line" href="https://play.google.com/store/apps/details?id=com.conquu.gezplan">Google Play'de aç</a>
+          <a class="btn btn-line" href="https://play.google.com/store/apps/details?id=com.conquu.gezplan&amp;hl=tr">Google Play'de aç</a>
         </div>
       </article>
 
@@ -102,11 +127,13 @@
     <p><strong style="color:var(--ink)">ConquApp</strong><br>Bağımsız mobil uygulama stüdyosu</p>
     <ul>
       <li><a href="mailto:kampprojesi@gmail.com">kampprojesi@gmail.com</a></li>
-      <li><a href="https://conquu.github.io/gezplan-privacy/">GezPlan gizlilik politikası</a></li>
-      <li><a href="https://play.google.com/store/apps/details?id=com.conquu.gezplan">Google Play</a></li>
+      <li><a href="https://conquu.github.io/gezplan-privacy/#tr">GezPlan gizlilik politikası</a></li>
+      <li><a href="https://conquu.github.io/gezplan-privacy/hesap-silme.html#tr">Hesap silme</a></li>
+      <li><a href="https://play.google.com/store/apps/details?id=com.conquu.gezplan&amp;hl=tr">Google Play</a></li>
     </ul>
   </div>
 </footer>
 
+<script src="site.js"></script>
 </body>
 </html>

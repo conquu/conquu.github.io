@@ -5,15 +5,39 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>GezPlan</title>
 <meta name="description" content="GezPlan, arkadaş gruplarının gezi planlamasını tek yerde toplar: eşya listesi, masraf bölüşümü, grup sohbeti, oylama ve ortak fotoğraf albümü. Android için ücretsiz.">
+<link rel="canonical" href="https://conquu.github.io/gezplan.html">
+<link rel="alternate" hreflang="tr" href="https://conquu.github.io/gezplan.html">
+<link rel="alternate" hreflang="en" href="https://conquu.github.io/en/gezplan.html">
+<link rel="alternate" hreflang="x-default" href="https://conquu.github.io/en/gezplan.html">
+<meta property="og:site_name" content="ConquApp">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://conquu.github.io/gezplan.html">
 <meta property="og:title" content="GezPlan: grup gezisi planlama">
 <meta property="og:description" content="Kim ne getiriyor, kim ne kadar ödedi, nereye gidiyoruz. Hepsi tek uygulamada.">
-<meta property="og:type" content="website">
+<meta property="og:image" content="https://conquu.github.io/og/gezplan-tr.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/gezplan-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/gezplan-192.png">
+<link rel="apple-touch-icon" href="icons/gezplan-180.png">
+<meta name="theme-color" content="#1C4F39">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<div class="lang-banner" id="langBanner" lang="en" hidden>
+  <div class="wrap">
+    <span>This page is also available in English.</span>
+    <a href="en/gezplan.html" hreflang="en" data-set-lang="en">View in English</a>
+    <button type="button" data-dismiss aria-label="Close">✕</button>
+  </div>
+</div>
 
 <header class="topbar">
   <div class="wrap">
@@ -22,6 +46,7 @@
       <a href="gezplan.html" aria-current="page">GezPlan</a>
       <a class="nav-extra" href="#ozellikler">Özellikler</a>
       <a href="index.html#iletisim">İletişim</a>
+      <a class="lang-pill" href="en/gezplan.html" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a>
     </nav>
   </div>
 </header>
@@ -34,7 +59,7 @@
       <h1>Gezi planı grup sohbetinde kaybolmasın.</h1>
       <p class="lede">GezPlan bir gezinin bütün hareketli parçalarını tek yerde tutuyor. Davet kodunu paylaş, herkes aynı plana katılsın.</p>
       <div class="actions">
-        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.conquu.gezplan">
+        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.conquu.gezplan&amp;hl=tr">
           <svg class="play-glyph" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9.5-5.5z" fill="currentColor"/></svg>
           Google Play'den indir
         </a>
@@ -54,7 +79,7 @@
           <div class="tc-count"><strong id="tcDays">11</strong><span>gün kaldı</span></div>
         </div>
         <div class="tc-bottom">
-          <div class="avatars"><span>E</span><span>M</span><span>S</span><em id="tcMembers">4 üye</em></div>
+          <div class="avatars"><span>E</span><span>M</span><span>S</span><em>4 üye</em></div>
           <div class="tc-ready"><strong id="tcReady">4/9</strong> hazır</div>
         </div>
       </div>
@@ -158,11 +183,11 @@
       <h2>Bir sonraki geziyi GezPlan'la planla.</h2>
       <p>Android için ücretsiz. Türkçe ve İngilizce.</p>
       <div class="actions">
-        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.conquu.gezplan">
+        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.conquu.gezplan&amp;hl=tr">
           <svg class="play-glyph" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9.5-5.5z" fill="currentColor"/></svg>
           Google Play'den indir
         </a>
-        <a class="btn btn-line" href="https://conquu.github.io/gezplan-privacy/">Gizlilik politikası</a>
+        <a class="btn btn-line" href="https://conquu.github.io/gezplan-privacy/#tr">Gizlilik politikası</a>
       </div>
     </div>
   </div>
@@ -176,110 +201,14 @@
     <ul>
       <li><a href="index.html">Ana sayfa</a></li>
       <li><a href="mailto:kampprojesi@gmail.com">kampprojesi@gmail.com</a></li>
-      <li><a href="https://conquu.github.io/gezplan-privacy/">Gizlilik politikası</a></li>
+      <li><a href="https://conquu.github.io/gezplan-privacy/#tr">GezPlan gizlilik politikası</a></li>
+      <li><a href="https://conquu.github.io/gezplan-privacy/hesap-silme.html#tr">Hesap silme</a></li>
+      <li><a href="https://play.google.com/store/apps/details?id=com.conquu.gezplan&amp;hl=tr">Google Play</a></li>
     </ul>
   </div>
 </footer>
 
-<script>
-(function () {
-  /* ---- gezi turu temasi ---- */
-  var THEMES = {
-    kamp:   { t1: "#2E7D5B", t2: "#43A57C", emoji: "⛺",  title: "Abant kampı",      place: "Abant Gölü, Bolu",       days: 11, ready: "4/9" },
-    deniz:  { t1: "#2F80C4", t2: "#56A8E0", emoji: "🏖️", title: "Antalya",          place: "Konyaaltı, Antalya",     days: 23, ready: "2/5" },
-    piknik: { t1: "#D96F24", t2: "#F2A65A", emoji: "🧺", title: "Pazar pikniği",    place: "Belgrad Ormanı, İstanbul", days: 3, ready: "6/7" },
-    doga:   { t1: "#8A5E36", t2: "#B98A5E", emoji: "🥾", title: "Kaçkar yürüyüşü",  place: "Yukarı Kavrun, Rize",    days: 38, ready: "1/8" }
-  };
-  var root = document.documentElement;
-  var themeButtons = document.querySelectorAll("[data-theme-key]");
-
-  function setTheme(key) {
-    var th = THEMES[key];
-    if (!th) return;
-    root.style.setProperty("--t1", th.t1);
-    root.style.setProperty("--t2", th.t2);
-    document.getElementById("tcEmoji").textContent = th.emoji;
-    document.getElementById("tcTitle").textContent = th.title;
-    document.getElementById("tcPlace").textContent = th.place;
-    document.getElementById("tcDays").textContent = th.days;
-    document.getElementById("tcReady").textContent = th.ready;
-    themeButtons.forEach(function (b) {
-      b.setAttribute("aria-pressed", b.getAttribute("data-theme-key") === key ? "true" : "false");
-    });
-  }
-
-  themeButtons.forEach(function (b) {
-    b.addEventListener("click", function () { setTheme(b.getAttribute("data-theme-key")); });
-  });
-
-  /* ---- kimler dahil demosu (uygulamadaki kurus mantigiyla ayni) ---- */
-  var ORDER = ["Ece", "Mert", "Selin", "Kaan"];
-  var PAYER = "Ece";
-  var AMOUNT_K = 90000; /* 900 TL, kurus */
-  var included = ORDER.slice();
-  var peopleButtons = document.querySelectorAll("[data-person]");
-  var msg = document.getElementById("splitMsg");
-
-  function fmt(k) {
-    var v = k / 100;
-    var digits = k % 100 !== 0 ? 2 : 0;
-    return v.toLocaleString("tr-TR", { minimumFractionDigits: digits, maximumFractionDigits: digits }) + " ₺";
-  }
-
-  function render() {
-    var n = included.length;
-    document.getElementById("incLabel").textContent = n === ORDER.length
-      ? "Kimler dahil: Herkes (" + n + " kişi)"
-      : "Kimler dahil: " + n + " kişi";
-
-    var base = Math.floor(AMOUNT_K / n);
-    var rem = AMOUNT_K - base * n;
-    var lines = document.getElementById("planLines");
-    lines.innerHTML = "";
-    var debtors = 0;
-    included.forEach(function (name, idx) {
-      if (name === PAYER) return;
-      var share = base + (idx < rem ? 1 : 0);
-      var row = document.createElement("div");
-      row.className = "plan-line";
-      var who = document.createElement("span");
-      who.textContent = name + " → " + PAYER;
-      var amt = document.createElement("b");
-      amt.textContent = fmt(share);
-      row.appendChild(who);
-      row.appendChild(amt);
-      lines.appendChild(row);
-      debtors++;
-    });
-    if (debtors === 0) {
-      var none = document.createElement("div");
-      none.className = "plan-line";
-      none.textContent = "Kimse borçlu değil. Ece kendi harcamasını ödedi.";
-      lines.appendChild(none);
-    }
-    peopleButtons.forEach(function (b) {
-      b.setAttribute("aria-pressed", included.indexOf(b.getAttribute("data-person")) !== -1 ? "true" : "false");
-    });
-  }
-
-  peopleButtons.forEach(function (b) {
-    b.addEventListener("click", function () {
-      var name = b.getAttribute("data-person");
-      var i = included.indexOf(name);
-      msg.textContent = "";
-      if (i !== -1) {
-        if (included.length <= 1) { msg.textContent = "En az bir kişi dahil olmalı."; return; }
-        included.splice(i, 1);
-      } else {
-        included = ORDER.filter(function (p) { return p === name || included.indexOf(p) !== -1; });
-      }
-      render();
-    });
-  });
-
-  render();
-})();
-</script>
-
+<script src="site.js"></script>
+<script src="gezplan.js"></script>
 </body>
 </html>

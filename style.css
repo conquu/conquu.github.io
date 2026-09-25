@@ -685,6 +685,53 @@ p:last-child { margin-bottom: 0; }
 
 .foot p { margin: 0; }
 
+/* ---------- dil secimi ---------- */
+
+[hidden] { display: none !important; }
+
+.topnav .lang-pill {
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  border: 1.5px solid var(--rule);
+  background: var(--surface);
+  padding: 0.28rem 0.6rem;
+}
+
+.topnav .lang-pill:hover { border-color: var(--brand); background: var(--surface); }
+
+.lang-banner {
+  background: var(--brand-deep);
+  color: #FFFFFF;
+  font-size: 0.93rem;
+}
+
+.lang-banner .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.9rem;
+  padding-block: 0.6rem;
+}
+
+.lang-banner a { color: #FFFFFF; font-weight: 700; }
+
+.lang-banner button {
+  margin-left: auto;
+  background: transparent;
+  border: 0;
+  color: #CFE3D8;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+  border-radius: 6px;
+}
+
+.lang-banner button:hover { color: #FFFFFF; }
+
+img.app-icon { object-fit: cover; }
+
 /* ---------- mobil ---------- */
 
 @media (max-width: 54rem) {
@@ -700,6 +747,11 @@ p:last-child { margin-bottom: 0; }
 
 @media (max-width: 26rem) {
   .topnav .nav-extra { display: none; }
+  .topbar .wrap { gap: 0.5rem; }
+  .topnav { flex-wrap: nowrap; gap: 0.15rem; font-size: 0.88rem; }
+  .topnav a { padding-inline: 0.45rem; }
+  .mark { font-size: 1.05rem; gap: 0.45rem; }
+  .mark-glyph { width: 1.7rem; height: 1.7rem; }
 }
 
 /* ---------- tek giris hareketi ---------- */
