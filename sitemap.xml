@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://conquu.github.io/</loc>
+    <loc>https://conquapp.com/</loc>
     <lastmod>2026-09-25</lastmod>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://conquu.github.io/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://conquu.github.io/en/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://conquapp.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://conquapp.com/en/"/>
   </url>
   <url>
-    <loc>https://conquu.github.io/en/</loc>
+    <loc>https://conquapp.com/en/</loc>
     <lastmod>2026-09-25</lastmod>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://conquu.github.io/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://conquu.github.io/en/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://conquapp.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://conquapp.com/en/"/>
   </url>
   <url>
-    <loc>https://conquu.github.io/gezplan.html</loc>
+    <loc>https://conquapp.com/gezplan.html</loc>
     <lastmod>2026-09-25</lastmod>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://conquu.github.io/gezplan.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://conquu.github.io/en/gezplan.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://conquapp.com/gezplan.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://conquapp.com/en/gezplan.html"/>
   </url>
   <url>
-    <loc>https://conquu.github.io/en/gezplan.html</loc>
+    <loc>https://conquapp.com/en/gezplan.html</loc>
     <lastmod>2026-09-25</lastmod>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://conquu.github.io/gezplan.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://conquu.github.io/en/gezplan.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://conquapp.com/gezplan.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://conquapp.com/en/gezplan.html"/>
   </url>
   <url>
-    <loc>https://conquu.github.io/yardim.html</loc>
+    <loc>https://conquapp.com/yardim.html</loc>
     <lastmod>2026-09-25</lastmod>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://conquu.github.io/yardim.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://conquu.github.io/en/help.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://conquapp.com/yardim.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://conquapp.com/en/help.html"/>
   </url>
   <url>
-    <loc>https://conquu.github.io/en/help.html</loc>
+    <loc>https://conquapp.com/en/help.html</loc>
     <lastmod>2026-09-25</lastmod>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://conquu.github.io/yardim.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://conquu.github.io/en/help.html"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://conquapp.com/yardim.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://conquapp.com/en/help.html"/>
   </url>
   <url>
-    <loc>https://conquu.github.io/gezplan-privacy/</loc>
+    <loc>https://conquapp.com/gezplan-privacy/</loc>
     <lastmod>2026-09-25</lastmod>
   </url>
   <url>
-    <loc>https://conquu.github.io/gezplan-privacy/hesap-silme.html</loc>
+    <loc>https://conquapp.com/gezplan-privacy/hesap-silme.html</loc>
     <lastmod>2026-09-25</lastmod>
   </url>
 </urlset>

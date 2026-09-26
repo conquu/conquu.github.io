@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /gezplan-privacy/sifre-sifirla.html
 
-Sitemap: https://conquu.github.io/sitemap.xml
+Sitemap: https://conquapp.com/sitemap.xml
