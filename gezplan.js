@@ -1,4 +1,5 @@
-/* GezPlan sayfası — gezi kartı teması ve "Kimler dahil?" demosu
+/* GezPlan sayfası — gezi kartı teması, kaydırmalı ekran anlatımı, geri sayım
+   ve "Kimler dahil?" demosu
    Metinler sayfanın diline (html lang) göre seçilir. Hesap, uygulamadaki
    kuruş mantığıyla aynı: taban pay + artık, dahil olanların sırasına göre dağıtılır. */
 (function () {
@@ -70,6 +71,45 @@
   themeButtons.forEach(function (b) {
     b.addEventListener("click", function () { setTheme(b.getAttribute("data-theme-key")); });
   });
+
+  /* ---- kaydırmalı anlatım: ortadaki adımın ekranı telefonda ---- */
+  var steps = document.querySelectorAll("[data-step]");
+  var shots = document.querySelectorAll("[data-shot]");
+  function activate(idx) {
+    steps.forEach(function (s, j) { s.classList.toggle("is-active", j === idx); });
+    shots.forEach(function (im, j) { im.classList.toggle("is-on", j === idx); });
+  }
+  if (steps.length && shots.length) {
+    activate(0);
+    if ("IntersectionObserver" in window) {
+      var so = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) activate(Array.prototype.indexOf.call(steps, e.target));
+        });
+      }, { rootMargin: "-45% 0px -45% 0px" });
+      steps.forEach(function (s) { so.observe(s); });
+    }
+  }
+
+  /* ---- geri sayım kutusu ---- */
+  var cd = document.getElementById("cdNum");
+  var cdTile = cd && cd.closest(".tile");
+  if (cd && cdTile) {
+    var to = parseInt(cd.getAttribute("data-to"), 10);
+    var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    cdTile.addEventListener("inview", function () {
+      if (reduceMotion) { cd.textContent = to; return; }
+      var from = 30, t0 = null, dur = 1400;
+      function step(ts) {
+        if (!t0) t0 = ts;
+        var p = Math.min(1, (ts - t0) / dur);
+        var eased = 1 - Math.pow(1 - p, 3);
+        cd.textContent = Math.round(from - (from - to) * eased);
+        if (p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }
 
   /* ---- kimler dahil demosu ---- */
   var ORDER = ["Ece", "Mert", "Selin", "Kaan"];

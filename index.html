@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" class="no-js">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script>(function(d){d.className=d.className.replace("no-js","js");try{var t=localStorage.getItem("conquapp-theme");if(t)d.setAttribute("data-theme",t)}catch(e){}})(document.documentElement)</script>
 <title>ConquApp</title>
 <meta name="description" content="ConquApp, birlikte bir şey organize eden gruplar için mobil uygulamalar geliştiriyor. İlk uygulaması GezPlan, Google Play'de ücretsiz.">
 <link rel="canonical" href="https://conquapp.com/">
@@ -28,7 +29,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "ConquApp", "url": "https://conquapp.com/", "logo": "https://conquapp.com/icons/conquapp-192.png", "email": "kampprojesi@gmail.com", "sameAs": ["https://www.tiktok.com/@gezplan.app", "https://www.instagram.com/conquapp", "https://www.reddit.com/user/Conquapp", "https://play.google.com/store/apps/details?id=com.conquu.gezplan"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "ConquApp", "url": "https://conquapp.com/", "logo": "https://conquapp.com/icons/conquapp-192.png", "email": "destek@conquapp.com", "sameAs": ["https://www.tiktok.com/@gezplan.app", "https://www.instagram.com/conquapp", "https://www.reddit.com/user/Conquapp", "https://play.google.com/store/apps/details?id=com.conquu.gezplan"]}</script>
 </head>
 <body>
 
@@ -47,6 +48,7 @@
       <a href="gezplan.html">GezPlan</a>
       <a class="nav-extra" href="#studyo">Stüdyo</a>
       <a href="yardim.html">Yardım</a>
+      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Koyu ya da açık tema" title="Koyu ya da açık tema"><svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="currentColor"/></svg><svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></g></svg></button>
       <a class="lang-pill" href="en/index.html" hreflang="en" lang="en" data-set-lang="en" title="English">EN</a>
     </nav>
   </div>
@@ -55,9 +57,12 @@
 <main>
 
 <section class="hero">
+  <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="grid-lines" aria-hidden="true"></div>
   <div class="wrap">
-    <div>
-      <h1>Birlikte plan yapan gruplar için uygulamalar.</h1>
+    <div class="reveal">
+      <p class="eyebrow">Bağımsız uygulama stüdyosu</p>
+      <h1><span class="stripe">Birlikte</span> plan yapan gruplar için uygulamalar.</h1>
       <p class="lede">Kim ne getiriyor, kim ne kadar ödedi, nereye gidiyoruz. ConquApp, grupların bu soruları tek yerde çözmesi için mobil uygulamalar geliştiriyor.</p>
       <div class="actions">
         <a class="btn btn-primary" href="gezplan.html">GezPlan'ı keşfet</a>
@@ -67,40 +72,49 @@
         </a>
       </div>
     </div>
-    <div class="fan" aria-label="GezPlan uygulamasından üç ekran">
-      <img src="img/liste.webp" alt="Ortak eşya listesi ekranı" width="620" height="1291">
-      <img src="img/masraf.webp" alt="Masraf bölüşümü ekranı" width="620" height="1288">
-      <img src="img/karne.webp" alt="Gezi karnesi ekranı" width="620" height="1286">
+    <div class="stage reveal d1" role="img" aria-label="GezPlan uygulamasından ekranlar">
+      <div class="phone" data-cycle>
+        <img src="img/ui-liste.webp" alt="Ortak eşya listesi ekranı" width="620" height="1291">
+        <img src="img/ui-masraf.webp" alt="Masraf bölüşümü ekranı" width="620" height="1288" loading="lazy">
+        <img src="img/ui-oylama.webp" alt="Oylama ekranı" width="620" height="1291" loading="lazy">
+        <img src="img/ui-karne.webp" alt="Gezi karnesi ekranı" width="620" height="1286" loading="lazy">
+      </div>
+      <div class="float f1" aria-hidden="true"><i>✅</i><span>Çadır<small>Mert getiriyor</small></span></div>
+      <div class="float f2" aria-hidden="true"><i>💸</i><span>Selin → Ece<small><b>225 ₺</b></small></span></div>
+      <div class="float f3" aria-hidden="true"><i>🗳️</i><span>Hangi gün?<small>Cumartesi kazandı</small></span></div>
     </div>
   </div>
 </section>
 
 <section class="band" id="uygulamalar">
   <div class="wrap">
-    <div class="section-head">
-      <h2>Uygulamalar</h2>
+    <div class="section-head reveal">
+      <p class="eyebrow">Uygulamalar</p>
+      <h2>Şimdilik bir tane. İyi bir tane.</h2>
     </div>
 
     <div class="shelf">
-      <article class="app-card">
-        <img class="app-icon" src="icons/gezplan-192.png" alt="" width="192" height="192">
-        <div>
-          <h3>GezPlan</h3>
-          <p class="dim">Grup gezisi planlama. Eşya listesi, masraf bölüşümü, sohbet, oylama ve ortak fotoğraf albümü. Tek bir davet koduyla herkes aynı plana katılıyor.</p>
-          <ul class="chips">
-            <li>Android</li>
-            <li>Ücretsiz</li>
-            <li>Türkçe ve İngilizce</li>
-          </ul>
+      <article class="app-feature reveal">
+        <div class="copy">
+          <div class="app-head">
+            <img class="app-icon" src="icons/gezplan-192.png" alt="" width="192" height="192">
+            <div><h3>GezPlan</h3><small>Grup gezisi planlama</small></div>
+          </div>
+          <p class="dim">Eşya listesi, masraf bölüşümü, sohbet, oylama ve ortak fotoğraf albümü. Tek bir davet koduyla herkes aynı plana katılıyor.</p>
+          <ul class="chips"><li>Android</li><li>Ücretsiz</li><li>Türkçe ve İngilizce</li></ul>
+          <div class="actions">
+            <a class="btn btn-primary" href="gezplan.html">Neler yapıyor</a>
+            <a class="btn btn-line" href="https://play.google.com/store/apps/details?id=com.conquu.gezplan&amp;hl=tr&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dsite%26utm_campaign%3Dhome_tr">Google Play'de aç</a>
+          </div>
         </div>
-        <div class="trip-stripe" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-        <div class="actions">
-          <a class="btn btn-primary" href="gezplan.html">Neler yapıyor</a>
-          <a class="btn btn-line" href="https://play.google.com/store/apps/details?id=com.conquu.gezplan&amp;hl=tr&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dsite%26utm_campaign%3Dhome_tr">Google Play'de aç</a>
+        <div class="peek" aria-hidden="true">
+          <img src="img/ui-liste.webp" alt="Liste ekranı" width="620" height="1291" loading="lazy">
+          <img src="img/ui-masraf.webp" alt="Masraf ekranı" width="620" height="1288" loading="lazy">
         </div>
       </article>
 
-      <div class="slot">
+      <div class="slot reveal d1">
+        <div class="dots" aria-hidden="true"><span></span><span></span><span></span></div>
         <h3>Sıradaki uygulama</h3>
         <p>Yeni uygulamalar hazır oldukça burada yer alacak.</p>
       </div>
@@ -110,13 +124,19 @@
 
 <section class="band" id="studyo">
   <div class="wrap">
-    <h2>Stüdyo</h2>
-    <p class="lede">ConquApp bağımsız bir mobil uygulama stüdyosu. Az sayıda uygulama yapıyoruz ve her birini uzun süre destekliyoruz.</p>
-    <p>GezPlan, arkadaş gruplarının gezi öncesi yaşadığı karmaşadan doğdu. Plan grup sohbetinde kayboluyor, hesap kâğıt peçeteye yazılıyor, aynı eşyayı üç kişi getiriyordu. Uygulama bu karmaşayı tek ekranda topluyor ve yayınlandığından beri düzenli güncelleme alıyor.</p>
-    <div class="facts">
-      <div><strong>6</strong><span>sekme: liste, masraf, sohbet, oy, not, anılar</span></div>
-      <div><strong>2</strong><span>dil desteği</span></div>
-      <div><strong>1.2.4</strong><span>güncel sürüm</span></div>
+    <div class="section-head reveal">
+      <p class="eyebrow">Stüdyo</p>
+      <h2>Az uygulama, uzun soluklu destek.</h2>
+      <p class="lede">ConquApp bağımsız bir mobil uygulama stüdyosu. Az sayıda uygulama yapıyoruz ve her birini uzun süre destekliyoruz.</p>
+    </div>
+    <div class="principles">
+      <div class="principle reveal d0"><span class="num">01</span><h3>Yayından sonra da gelişir</h3><p>Uygulamalar yayınlandıktan sonra da düzenli güncelleme alıyor. GezPlan'ın her sürümünde yeni bir şey var.</p></div>
+      <div class="principle reveal d1"><span class="num">02</span><h3>Verin satılmaz</h3><p>Kişisel verileri kimseye satmıyoruz. Ücretsiz sürümdeki reklamlar kişiselleştirilmeden gösteriliyor.</p></div>
+      <div class="principle reveal d2"><span class="num">03</span><h3>Öneriler bize ulaşır</h3><p>Uygulamanın içinden gönderdiğin öneri ve geri bildirimler doğrudan bize geliyor.</p></div>
+    </div>
+    <div class="story reveal">
+      <p>GezPlan, arkadaş gruplarının gezi öncesi yaşadığı karmaşadan doğdu. Plan grup sohbetinde kayboluyor, hesap kâğıt peçeteye yazılıyor, aynı eşyayı üç kişi getiriyordu. Uygulama bu karmaşayı tek ekranda topluyor.</p>
+      <div class="facts"><div><strong>6</strong><span>sekme: liste, masraf, sohbet, oy, not, anılar</span></div><div><strong>2</strong><span>dil desteği</span></div><div><strong>1.2.4</strong><span>güncel sürüm</span></div></div>
     </div>
   </div>
 </section>
@@ -133,7 +153,7 @@
     </div>
     <ul>
       <li><a href="yardim.html">Yardım</a></li>
-      <li><a href="mailto:kampprojesi@gmail.com">kampprojesi@gmail.com</a></li>
+      <li><a href="mailto:destek@conquapp.com">destek@conquapp.com</a></li>
       <li><a href="https://conquapp.com/gezplan-privacy/#tr">GezPlan gizlilik politikası</a></li>
       <li><a href="https://conquapp.com/gezplan-privacy/hesap-silme.html#tr">Hesap silme</a></li>
       <li><a href="https://play.google.com/store/apps/details?id=com.conquu.gezplan&amp;hl=tr&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dsite%26utm_campaign%3Dfooter_tr">Google Play</a></li>

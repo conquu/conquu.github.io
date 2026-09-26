@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script>(function(d){d.className=d.className.replace("no-js","js");try{var t=localStorage.getItem("conquapp-theme");if(t)d.setAttribute("data-theme",t)}catch(e){}})(document.documentElement)</script>
 <title>GezPlan</title>
 <meta name="description" content="GezPlan brings a friend group's trip planning into one place: packing list, expense splitting, group chat, polls and a shared photo album. Free for Android.">
 <link rel="canonical" href="https://conquapp.com/en/gezplan.html">
@@ -46,6 +47,7 @@
       <a href="gezplan.html" aria-current="page">GezPlan</a>
       <a class="nav-extra" href="#features">Features</a>
       <a href="help.html">Help</a>
+      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Dark or light theme" title="Dark or light theme"><svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="currentColor"/></svg><svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></g></svg></button>
       <a class="lang-pill" href="../gezplan.html" hreflang="tr" lang="tr" data-set-lang="tr" title="Türkçe">TR</a>
     </nav>
   </div>
@@ -54,9 +56,11 @@
 <main>
 
 <section class="trip-hero">
+  <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
   <div class="wrap">
-    <div>
-      <h1>Don't let your trip plan get lost in the group chat.</h1>
+    <div class="reveal">
+      <p class="eyebrow">GezPlan · Android</p>
+      <h1>Don't let your trip plan get lost in the <span class="stripe">group chat.</span></h1>
       <p class="lede">GezPlan keeps every moving part of a trip in one place. Share the invite code and everyone joins the same plan.</p>
       <div class="actions">
         <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.conquu.gezplan&amp;hl=en&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dsite%26utm_campaign%3Dgezplan_en">
@@ -67,7 +71,7 @@
       </div>
     </div>
 
-    <div class="trip-demo">
+    <div class="trip-demo reveal d1">
       <div class="trip-card" id="tripCard" aria-live="polite">
         <div class="tc-top">
           <span class="tc-emoji" id="tcEmoji" aria-hidden="true">⛺</span>
@@ -96,99 +100,151 @@
 
 <section class="band" id="features">
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head reveal">
+      <p class="eyebrow">Tabs</p>
       <h2>A tab for everything your group talks about</h2>
       <p class="lede">Everything updates live. When someone adds something, everyone else sees it right away.</p>
+      <p class="shots-note">The screenshots show the app in Turkish; it works in English too.</p>
     </div>
-
-    <div class="gallery" tabindex="0" aria-label="App screens">
-      <figure>
-        <img src="../img/masraf.webp" alt="Expenses tab: total spent, category breakdown and who owes whom" width="620" height="1288">
-        <figcaption><strong>Expenses</strong><span>Enter what you spent. The app works out who owes whom.</span></figcaption>
-      </figure>
-      <figure>
-        <img src="../img/liste.webp" alt="List tab: shared packing list and who is bringing what" width="620" height="1291" loading="lazy">
-        <figcaption><strong>List</strong><span>Someone claims each item, so nobody brings three of the same thing.</span></figcaption>
-      </figure>
-      <figure>
-        <img src="../img/oylama.webp" alt="Polls tab: a new poll and its results" width="620" height="1291" loading="lazy">
-        <figcaption><strong>Polls</strong><span>Which day, what time, where to eat. Let the group vote.</span></figcaption>
-      </figure>
-      <figure>
-        <img src="../img/sohbet.webp" alt="Chat tab: group messages for this trip" width="620" height="1287" loading="lazy">
-        <figcaption><strong>Chat and notes</strong><span>Ticket times and meeting points don't get buried under hundreds of messages.</span></figcaption>
-      </figure>
-      <figure>
-        <img src="../img/anilar.webp" alt="Memories tab: shared photo album" width="620" height="1286" loading="lazy">
-        <figcaption><strong>Memories</strong><span>Everyone's photos in one shared album.</span></figcaption>
-      </figure>
-      <figure>
-        <img src="../img/karne.webp" alt="Trip report: people, spending, photo and message stats" width="620" height="1286" loading="lazy">
-        <figcaption><strong>Trip report</strong><span>When the trip ends you get a summary. Who was the most generous, who talked the most.</span></figcaption>
-      </figure>
-      <figure>
-        <img src="../img/rozet.webp" alt="Profile screen: trip history and badges" width="620" height="1289" loading="lazy">
-        <figcaption><strong>Profile and badges</strong><span>Your trip history adds up, and new places unlock badges.</span></figcaption>
-      </figure>
+    <div class="scrolly">
+      <ol class="steps">
+      <li class="step" data-step>
+        <span class="n">01</span>
+        <h3>List</h3>
+        <p>Someone claims each item, so nobody brings three of the same thing and nothing gets forgotten.</p>
+        <img class="step-img" src="../img/ui-liste.webp" alt="List tab: shared packing list and who is bringing what" width="620" height="1291" loading="lazy">
+      </li>
+      <li class="step" data-step>
+        <span class="n">02</span>
+        <h3>Expenses</h3>
+        <p>Enter what you spent. The app works out who owes whom, down to the cent.</p>
+        <img class="step-img" src="../img/ui-masraf.webp" alt="Expenses tab: total spent, category breakdown and who owes whom" width="620" height="1288" loading="lazy">
+      </li>
+      <li class="step" data-step>
+        <span class="n">03</span>
+        <h3>Polls</h3>
+        <p>Which day, what time, where to eat. Let the group vote instead of arguing.</p>
+        <img class="step-img" src="../img/ui-oylama.webp" alt="Polls tab: a new poll and its results" width="620" height="1291" loading="lazy">
+      </li>
+      <li class="step" data-step>
+        <span class="n">04</span>
+        <h3>Chat and notes</h3>
+        <p>Ticket times and meeting points don't get buried under hundreds of messages.</p>
+        <img class="step-img" src="../img/ui-sohbet.webp" alt="Chat tab: group messages for this trip" width="620" height="1287" loading="lazy">
+      </li>
+      <li class="step" data-step>
+        <span class="n">05</span>
+        <h3>Memories</h3>
+        <p>Everyone's photos end up in one shared album.</p>
+        <img class="step-img" src="../img/ui-anilar.webp" alt="Memories tab: shared photo album" width="620" height="1286" loading="lazy">
+      </li>
+      <li class="step" data-step>
+        <span class="n">06</span>
+        <h3>Trip report</h3>
+        <p>When the trip ends you get a summary. Who was the most generous, who talked the most.</p>
+        <img class="step-img" src="../img/ui-karne.webp" alt="Trip report: people, spending, photo and message stats" width="620" height="1286" loading="lazy">
+      </li>
+      <li class="step" data-step>
+        <span class="n">07</span>
+        <h3>Profile and badges</h3>
+        <p>Your trip history adds up, and new places unlock badges.</p>
+        <img class="step-img" src="../img/ui-rozet.webp" alt="Profile screen: trip history and badges" width="620" height="1289" loading="lazy">
+      </li>
+      </ol>
+      <p class="swipe-hint">Swipe for the other tabs.</p>
+      <div class="sticky-phone" aria-hidden="true">
+        <div class="phone">
+          <img src="../img/ui-liste.webp" alt="" width="620" height="1291" data-shot>
+          <img src="../img/ui-masraf.webp" alt="" width="620" height="1288" loading="lazy" data-shot>
+          <img src="../img/ui-oylama.webp" alt="" width="620" height="1291" loading="lazy" data-shot>
+          <img src="../img/ui-sohbet.webp" alt="" width="620" height="1287" loading="lazy" data-shot>
+          <img src="../img/ui-anilar.webp" alt="" width="620" height="1286" loading="lazy" data-shot>
+          <img src="../img/ui-karne.webp" alt="" width="620" height="1286" loading="lazy" data-shot>
+          <img src="../img/ui-rozet.webp" alt="" width="620" height="1289" loading="lazy" data-shot>
+        </div>
+      </div>
     </div>
-    <p class="swipe-hint">Swipe for more screens. The screenshots show the app in Turkish; it works in English too.</p>
   </div>
 </section>
 
 <section class="band" id="whos-in">
-  <div class="wrap split">
-    <div>
-      <h2>Costs not everyone shared are split only among those who did</h2>
-      <p class="lede">If three of four friends went to dinner, the fourth doesn't owe anything. When you add an expense, you choose who's included and the app does the rest.</p>
-      <p class="dim">Tap people in the example to try it.</p>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Details</p>
+      <h2>Money and prep, out in the open</h2>
     </div>
+    <div class="bento">
+      <div class="tile big">
+        <div>
+          <h3>Costs not everyone shared are split only among those who did</h3>
+          <p>If three of four friends went to dinner, the fourth doesn't owe anything. When you add an expense, you choose who's included. Tap people in the example to try it.</p>
+        </div>
+        <div class="split-panel">
+          <div class="exp-row"><strong>Dinner</strong><span class="exp-amount">$90</span></div>
+          <div class="exp-by">Paid by Ece</div>
+          <div class="inc-label" id="incLabel">Included: Everyone (4 people)</div>
+          <div class="people" role="group" aria-label="Who's included">
+            <button type="button" id="p-ece" data-person="Ece" aria-pressed="true">Ece</button>
+            <button type="button" id="p-mert" data-person="Mert" aria-pressed="true">Mert</button>
+            <button type="button" id="p-selin" data-person="Selin" aria-pressed="true">Selin</button>
+            <button type="button" id="p-kaan" data-person="Kaan" aria-pressed="true">Kaan</button>
+          </div>
+          <div class="plan" aria-live="polite">
+            <div class="plan-title">💸 Payment plan</div>
+            <div id="planLines"></div>
+          </div>
+          <p class="split-msg" id="splitMsg"></p>
+        </div>
+      </div>
 
-    <div class="split-panel">
-      <div class="exp-row"><strong>Dinner</strong><span class="exp-amount">$90</span></div>
-      <div class="exp-by">Paid by Ece</div>
-      <div class="inc-label" id="incLabel">Included: Everyone (4 people)</div>
-      <div class="people" role="group" aria-label="Who's included">
-        <button type="button" id="p-ece" data-person="Ece" aria-pressed="true">Ece</button>
-        <button type="button" id="p-mert" data-person="Mert" aria-pressed="true">Mert</button>
-        <button type="button" id="p-selin" data-person="Selin" aria-pressed="true">Selin</button>
-        <button type="button" id="p-kaan" data-person="Kaan" aria-pressed="true">Kaan</button>
+      <div class="tile">
+        <div>
+          <div class="count-big"><span id="cdNum" data-to="11">11</span><small>days left</small></div>
+          <div class="ready" style="margin-top:1rem"><span>4/9 ready</span><div class="bar" style="--w:44%"><i></i></div></div>
+        </div>
+        <div><h3>Countdown</h3><p>Days until the trip and how ready the group is, right on the main card.</p></div>
       </div>
-      <div class="plan" aria-live="polite">
-        <div class="plan-title">💸 Payment plan</div>
-        <div id="planLines"></div>
+
+      <div class="tile">
+        <div>
+          <div class="wx"><span class="wx-sun" aria-hidden="true">☀️</span><div><div class="wx-temp">24°</div><div class="wx-place">Abant · Saturday</div></div></div>
+          <div class="wx-days" style="margin-top:0.9rem" aria-hidden="true"><span>Sat</span><span>Sun</span><span>Mon</span></div>
+        </div>
+        <div><h3>Weather</h3><p>The forecast for your destination shows on the trip card.</p></div>
       </div>
-      <p class="split-msg" id="splitMsg"></p>
+
+      <div class="tile">
+        <div class="notes" aria-hidden="true">
+          <div class="note"><img src="../icons/gezplan-192.png" alt="" width="192" height="192" loading="lazy"><div><b>Lake camping</b><span>3 days to go</span></div></div>
+          <div class="note"><img src="../icons/gezplan-192.png" alt="" width="192" height="192" loading="lazy"><div><b>Lake camping</b><span>You're leaving tomorrow</span></div></div>
+        </div>
+        <div><h3>Reminders</h3><p>You get a notification as a trip you created gets closer.</p></div>
+      </div>
+
+      <div class="tile">
+        <div class="doc" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><em>PDF</em></div>
+        <div><h3>PDF report</h3><p>Send the expense summary and payment plan to the group as a PDF.</p></div>
+      </div>
     </div>
+    <p class="dim premium-note">GezPlan is free. Premium, with extras like unlimited trips, unlimited photos and expense analytics, is on the way.</p>
   </div>
 </section>
 
-<section class="band">
+<section class="band tight">
   <div class="wrap">
-    <div class="section-head">
-      <h2>Also</h2>
-    </div>
-    <ul class="extras">
-      <li><strong>Countdown</strong><span>Days until the trip and how ready the group is, right on the main card.</span></li>
-      <li><strong>Weather</strong><span>The forecast for your destination shows on the trip card.</span></li>
-      <li><strong>Reminders</strong><span>You get a notification as the trip gets closer.</span></li>
-      <li><strong>PDF report</strong><span>Send the expense summary and payment plan to the group as a PDF.</span></li>
-    </ul>
-    <p class="dim" style="margin-top:2rem">GezPlan is free. Premium, with extras like unlimited trips, unlimited photos and expense analytics, is on the way.</p>
-  </div>
-</section>
-
-<section class="band">
-  <div class="wrap">
-    <div class="cta">
-      <h2>Plan your next trip with GezPlan.</h2>
-      <p>Free for Android. In Turkish and English.</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.conquu.gezplan&amp;hl=en&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dsite%26utm_campaign%3Dgezplan_en">
-          <svg class="play-glyph" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9.5-5.5z" fill="currentColor"/></svg>
-          Get it on Google Play
-        </a>
-        <a class="btn btn-line" href="https://conquapp.com/gezplan-privacy/#en">Privacy policy</a>
+    <div class="cta reveal">
+      <div class="copy">
+        <h2>Plan your next trip with GezPlan.</h2>
+        <p>Free for Android. In Turkish and English.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.conquu.gezplan&amp;hl=en&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dsite%26utm_campaign%3Dgezplan_en">
+            <svg class="play-glyph" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9.5-5.5z" fill="currentColor"/></svg>
+            Get it on Google Play
+          </a>
+          <a class="btn btn-line" href="https://conquapp.com/gezplan-privacy/#en">Privacy policy</a>
+        </div>
       </div>
+      <img class="cta-icon" src="../icons/gezplan-192.png" alt="" width="192" height="192" loading="lazy">
     </div>
   </div>
 </section>
@@ -206,7 +262,7 @@
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="help.html">Help</a></li>
-      <li><a href="mailto:kampprojesi@gmail.com">kampprojesi@gmail.com</a></li>
+      <li><a href="mailto:destek@conquapp.com">destek@conquapp.com</a></li>
       <li><a href="https://conquapp.com/gezplan-privacy/#en">GezPlan privacy policy</a></li>
       <li><a href="https://conquapp.com/gezplan-privacy/hesap-silme.html#en">Account deletion</a></li>
       <li><a href="https://play.google.com/store/apps/details?id=com.conquu.gezplan&amp;hl=en&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dsite%26utm_campaign%3Dfooter_en">Google Play</a></li>
