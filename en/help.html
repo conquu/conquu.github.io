@@ -108,6 +108,10 @@
         <summary>Where can I see who owes whom?</summary>
         <div class="faq-a"><p>The Expenses tab shows everyone's balance and a <strong>Payment plan</strong>. The plan tells you who should send how much to whom, settling the debts in as few payments as possible.</p></div>
       </details>
+      <details class="faq" id="currency">
+        <summary>How do I choose the trip's currency?</summary>
+        <div class="faq-a"><p>Pick it in the <strong>Currency</strong> field when you create a trip; by default it follows your phone's region. The admin can change it later from the edit trip screen. Changing the currency only changes the symbol; amounts are not converted. This arrived in version 1.2.5.</p></div>
+      </details>
       <details class="faq" id="undo-paid">
         <summary>I tapped "Paid" by mistake.</summary>
         <div class="faq-a"><p>In the Expenses tab, find the payment under <strong>Payments made</strong> and tap <strong>Undo</strong>. Only the person who made or received the payment can undo it.</p></div>
@@ -117,15 +121,15 @@
       <h2>Trips and members</h2>
       <details class="faq" id="archived">
         <summary>Why was my trip archived?</summary>
-        <div class="faq-a"><p>Two days after the trip date, the trip is archived automatically the next time the person who created it opens the app. Archived trips are read-only for everyone, so nothing can be added or edited. Use the <strong>Unarchive</strong> button inside the trip to bring it back.</p></div>
+        <div class="faq-a"><p>Trips with a date are archived automatically overnight, two days after the trip date; nobody needs to open the app. Archived trips are read-only for everyone, so nothing can be added or edited. The trip's admin can bring it back with the <strong>Unarchive</strong> button inside the trip.</p></div>
       </details>
       <details class="faq" id="leave">
         <summary>How do I leave a trip?</summary>
-        <div class="faq-a"><p>Tap the door icon at the top right of the trip screen and confirm <strong>Leave trip</strong>. After you leave, you can't see that trip's lists, expenses or chat. The icon is only shown to members; the person who created the trip (the admin) can't leave it.</p></div>
+        <div class="faq-a"><p>Tap the door icon at the top right of the trip screen and confirm <strong>Leave trip</strong>. After you leave, you can't see that trip's lists, expenses or chat. Expenses you paid and payments made stay as "Former member" so the group's balances remain correct; if you owe money, we recommend settling up before you leave. The door icon isn't shown to the admin: to leave, the admin first hands admin rights to another member with the 👑 in the member list.</p></div>
       </details>
       <details class="faq" id="delete-trip">
         <summary>What happens if I delete an archived trip?</summary>
-        <div class="faq-a"><p>The 🗑️ icon in your past trips removes the trip from your list only. It stays as it is for the other members.</p></div>
+        <div class="faq-a"><p>The 🗑️ icon in your past trips removes the trip from your list, and the trip continues for the other members. If you are the trip's admin, admin rights pass to its longest-standing member. If you are the only member, the trip is permanently deleted with everything in it.</p></div>
       </details>
       <details class="faq" id="my-bag">
         <summary>Who can see My bag?</summary>
@@ -144,7 +148,7 @@
       </details>
       <details class="faq" id="delete-account">
         <summary>How do I delete my account?</summary>
-        <div class="faq-a"><p><strong>My Profile → Account → Delete my account</strong>. The steps and what gets deleted are on the <a href="https://conquapp.com/gezplan-privacy/hesap-silme.html#en">account deletion page</a>. Keep in mind that trips you created are deleted for the other members too.</p></div>
+        <div class="faq-a"><p><strong>My Profile → Account → Delete my account</strong>. The steps and what gets deleted are on the <a href="https://conquapp.com/gezplan-privacy/hesap-silme.html#en">account deletion page</a>. Trips you created that have other members aren't deleted; admin rights pass to their longest-standing member. Trips where you are the only member are deleted.</p></div>
       </details>
       <details class="faq" id="privacy">
         <summary>How is my data used?</summary>
@@ -155,7 +159,7 @@
       <h2>Notifications, photos and permissions</h2>
       <details class="faq" id="notifications">
         <summary>I'm not getting reminders.</summary>
-        <div class="faq-a"><p>Reminders only come for trips that have a date: 1 week, 3 days and 1 day before, and on the day of the trip. For now, reminders only go to the phone of the person who created the trip, not to members who joined. Make sure notifications are allowed for GezPlan in your phone's settings. Battery saver mode can also delay them.</p></div>
+        <div class="faq-a"><p>Reminders only come for trips that have a date: 1 week, 3 days and 1 day before, and on the day of the trip. Since version 1.2.5, reminders go to the person who created the trip and to every member who joined; they update if the trip date changes or you leave the trip. Make sure notifications are allowed for GezPlan in your phone's settings. Battery saver mode can also delay them.</p></div>
       </details>
       <details class="faq" id="weather">
         <summary>The weather doesn't show up.</summary>
