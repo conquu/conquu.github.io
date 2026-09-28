@@ -108,6 +108,10 @@
         <summary>Kim kime ne kadar borçlu, nereden görürüm?</summary>
         <div class="faq-a"><p>Masraf sekmesinde herkesin bakiyesi ve bir <strong>Ödeme planı</strong> var. Plan, borçları az sayıda ödemeyle kapatacak şekilde kimin kime ne kadar göndereceğini gösteriyor.</p></div>
       </details>
+      <details class="faq" id="para-birimi">
+        <summary>Gezinin para birimini nasıl seçerim?</summary>
+        <div class="faq-a"><p>Gezi oluştururken <strong>Para birimi</strong> alanından seçebilirsin; varsayılan olarak telefonunun bölgesine göre gelir. Yönetici, gezi düzenleme ekranından sonradan değiştirebilir. Para birimi değişince yalnızca simge değişir; tutarlar başka bir para birimine çevrilmez. Bu özellik 1.2.5 sürümüyle geldi.</p></div>
+      </details>
       <details class="faq" id="odendi">
         <summary>Yanlışlıkla "Ödendi"ye bastım.</summary>
         <div class="faq-a"><p>Masraf sekmesindeki <strong>Yapılan ödemeler</strong> listesinde o ödemenin yanındaki <strong>Geri al</strong>'a dokun. Bir ödemeyi sadece ödemeyi yapan veya alan kişi geri alabilir.</p></div>
@@ -117,15 +121,15 @@
       <h2>Gezi ve üyeler</h2>
       <details class="faq" id="arsiv">
         <summary>Gezim neden arşive geçti?</summary>
-        <div class="faq-a"><p>Gezi tarihinin üzerinden iki gün geçtikten sonra, geziyi kuran kişi uygulamayı açtığında gezi otomatik olarak arşive alınır. Arşivdeki gezi herkes için salt okunurdur, yani ekleme ve düzenleme kapanır. Gezinin içindeki <strong>Arşivden çıkar</strong> düğmesiyle yeniden açabilirsin.</p></div>
+        <div class="faq-a"><p>Tarihi girilmiş geziler, gezi tarihinden 2 gün sonra gece otomatik olarak arşive alınır; kimsenin uygulamayı açması gerekmez. Arşivdeki gezi herkes için salt okunurdur, yani ekleme ve düzenleme kapanır. Gezinin yöneticisi, gezinin içindeki <strong>Arşivden çıkar</strong> düğmesiyle geziyi yeniden açabilir.</p></div>
       </details>
       <details class="faq" id="ayril">
         <summary>Bir geziden nasıl ayrılırım?</summary>
-        <div class="faq-a"><p>Gezi ekranının sağ üstündeki kapı simgesine dokun ve <strong>Geziden ayrıl</strong>'ı onayla. Ayrıldıktan sonra o gezinin listelerine, masraflarına ve sohbetine erişemezsin. Bu simge sadece üyelerde görünür; geziyi kuran kişi (yönetici) kendi gezisinden ayrılamaz.</p></div>
+        <div class="faq-a"><p>Gezi ekranının sağ üstündeki kapı simgesine dokun ve <strong>Geziden ayrıl</strong>'ı onayla. Ayrıldıktan sonra o gezinin listelerine, masraflarına ve sohbetine erişemezsin. Ödediğin masraflar ve yapılan ödemeler, grubun hesabı bozulmasın diye "Ayrılan üye" adıyla kalır; açık bir borcun varsa ayrılmadan önce kapatmanı öneririz. Kapı simgesi yöneticide görünmez: yönetici ayrılmak isterse önce üye listesindeki 👑 ile yöneticiliği başka bir üyeye devretmeli.</p></div>
       </details>
       <details class="faq" id="gezi-sil">
         <summary>Arşivdeki bir geziyi silersem ne olur?</summary>
-        <div class="faq-a"><p>Geçmiş geziler listesindeki 🗑️ simgesi geziyi sadece senin listenden kaldırır. Gezi diğer üyeler için olduğu gibi devam eder.</p></div>
+        <div class="faq-a"><p>Geçmiş geziler listesindeki 🗑️ simgesi geziyi senin listenden kaldırır ve gezi diğer üyeler için devam eder. Gezinin yöneticisiysen yöneticilik gezinin en eski üyesine geçer. Gezinin tek üyesi sensen gezi, içindeki her şeyle birlikte kalıcı olarak silinir.</p></div>
       </details>
       <details class="faq" id="canta">
         <summary>Çantam listesini kimler görür?</summary>
@@ -144,7 +148,7 @@
       </details>
       <details class="faq" id="hesap-sil">
         <summary>Hesabımı nasıl silerim?</summary>
-        <div class="faq-a"><p><strong>Profilim → Hesap Bilgileri → Hesabımı sil</strong>. Adımlar ve hangi verilerin silindiği <a href="https://conquapp.com/gezplan-privacy/hesap-silme.html#tr">hesap silme sayfasında</a> yazıyor. Kurduğun gezilerin diğer üyeler için de silineceğini unutma.</p></div>
+        <div class="faq-a"><p><strong>Profilim → Hesap Bilgileri → Hesabımı sil</strong>. Adımlar ve hangi verilerin silindiği <a href="https://conquapp.com/gezplan-privacy/hesap-silme.html#tr">hesap silme sayfasında</a> yazıyor. Kurduğun ve başka üyesi olan geziler silinmez, yöneticiliği gezinin en eski üyesine geçer. Tek üyesi sen olan geziler silinir.</p></div>
       </details>
       <details class="faq" id="gizlilik">
         <summary>Verilerim nasıl kullanılıyor?</summary>
@@ -155,7 +159,7 @@
       <h2>Bildirimler, fotoğraflar ve izinler</h2>
       <details class="faq" id="bildirim">
         <summary>Hatırlatma bildirimleri gelmiyor.</summary>
-        <div class="faq-a"><p>Hatırlatmalar sadece tarihi girilmiş gezilerde gelir: gezi tarihinden 1 hafta, 3 gün ve 1 gün önce, bir de gezi günü. Şu an hatırlatmalar yalnızca geziyi kuran kişinin telefonuna gelir; katıldığın gezilerde hatırlatma gelmez. Telefonunun ayarlarında GezPlan'ın bildirim izninin açık olduğundan emin ol. Pil tasarrufu modu da bildirimleri geciktirebilir.</p></div>
+        <div class="faq-a"><p>Hatırlatmalar sadece tarihi girilmiş gezilerde gelir: gezi tarihinden 1 hafta, 3 gün ve 1 gün önce, bir de gezi günü. 1.2.5 sürümüyle hatırlatmalar geziyi kuran kişiye ve katılan bütün üyelere gelir; gezi tarihi değişirse ya da geziden ayrılırsan hatırlatmalar da güncellenir. Telefonunun ayarlarında GezPlan'ın bildirim izninin açık olduğundan emin ol. Pil tasarrufu modu da bildirimleri geciktirebilir.</p></div>
       </details>
       <details class="faq" id="hava">
         <summary>Hava durumu görünmüyor.</summary>
