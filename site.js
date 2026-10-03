@@ -1,5 +1,5 @@
 /* ConquApp — tüm sayfalar: dil tercihi, koyu/açık tema, beliren bölümler,
-   ana sayfadaki telefon ekranı döngüsü. Tercihler tarayıcıda saklanır;
+   ana sayfadaki telefon ekranı döngüsü ve eğimi. Tercihler tarayıcıda saklanır;
    saklanamazsa sayfa yine normal çalışır. */
 (function () {
   var root = document.documentElement;
@@ -64,6 +64,43 @@
     watched.forEach(function (el) {
       el.classList.add("is-in");
       el.dispatchEvent(new CustomEvent("inview"));
+    });
+  }
+
+  /* ---- beliren bölümler: kaydırma animasyonu olmayan tarayıcılar için ---- */
+  var scrollAnim = window.CSS && CSS.supports && CSS.supports("animation-timeline: view()");
+  if (!scrollAnim && !reduce && "IntersectionObserver" in window) {
+    var reveals = document.querySelectorAll(".reveal");
+    root.classList.add("io-reveal");
+    var rio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("is-shown"); rio.unobserve(e.target); }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    reveals.forEach(function (el) { rio.observe(el); });
+  }
+
+  /* ---- ana sayfa: telefona fareyle hafif 3B eğim ---- */
+  var stage = document.querySelector(".stage");
+  var finePointer = window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  if (stage && finePointer && !reduce) {
+    stage.setAttribute("data-tilt", "");
+    var phone = stage.querySelector(".phone");
+    var raf = 0;
+    stage.addEventListener("pointermove", function (ev) {
+      if (raf) return;
+      raf = requestAnimationFrame(function () {
+        raf = 0;
+        var r = stage.getBoundingClientRect();
+        var x = (ev.clientX - r.left) / r.width - 0.5;
+        var y = (ev.clientY - r.top) / r.height - 0.5;
+        phone.style.setProperty("--ry", (x * 10).toFixed(2) + "deg");
+        phone.style.setProperty("--rx", (y * -8).toFixed(2) + "deg");
+      });
+    });
+    stage.addEventListener("pointerleave", function () {
+      phone.style.setProperty("--ry", "0deg");
+      phone.style.setProperty("--rx", "0deg");
     });
   }
 
